@@ -1,2 +1,2 @@
 # nginxless
-PoC of Swoole serving FPM requests for popular frameworks like Laravel &amp; WordPress.
+PoC of Swoole serving PHP-FPM requests for popular frameworks like Laravel &amp; WordPress.
