@@ -9,3 +9,25 @@ services:
       - ./laravel/:/var/www/html/
     environment:
       DOCUMENT_ROOT: /var/www/html/public/
+
+  wp_db:
+    container_name: nginxless_wp_db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: swoole_rocks
+      MYSQL_DATABASE: nginxless_wp
+      MYSQL_PASSWORD: nginxless_wp
+      MYSQL_USER: nginxless_wp
+
+  wp:
+    container_name: nginxless_wp
+    build:
+      context: ./nginxless
+    ports:
+      - 82:80
+    volumes:
+      - ./wordpress/:/var/www/html/
+    environment:
+      DOCUMENT_ROOT: /var/www/html/web/
+    depends_on:
+      - wp_db
