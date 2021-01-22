@@ -22,7 +22,7 @@ services:
   wp:
     container_name: nginxless_wp
     build:
-      context: ./nginxless
+      context: ./wordpress
     ports:
       - 82:80
     volumes:
