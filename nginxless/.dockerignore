@@ -1,0 +1,5 @@
+**
+
+!composer.*
+!server.php
+!docker-php-entrypoint

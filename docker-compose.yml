@@ -1,0 +1,11 @@
+services:
+  laravel:
+    container_name: nginxless_laravel
+    build:
+      context: ./nginxless
+    ports:
+      - 81:80
+    volumes:
+      - ./laravel/:/var/www/html/
+    environment:
+      DOCUMENT_ROOT: /var/www/html/public/

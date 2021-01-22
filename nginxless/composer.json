@@ -1,0 +1,20 @@
+{
+    "name": "leocavalcante/nginxless-proxy-server",
+    "description": "PoC of Swoole serving PHP-FPM requests for popular frameworks like Laravel and WordPress",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leocavalcante",
+            "email": "lc@leocavalcante.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "monolog/monolog": "^2.2"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "swoole/ide-helper": "^4.6"
+    }
+}
